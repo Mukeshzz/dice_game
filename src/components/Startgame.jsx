@@ -37,7 +37,7 @@ export default function Startgame({ setStart }) {
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#003161] gap-2 ">
         <h1 className="text-5xl font-bold text-[#FFF4B7] font-poppins">🎲 Dice Game 🎲</h1>
 
-        <p className="mt-4  text-lg text-white">Balance: ${balance}</p>
+        <p className="mt-4 text-2xl font-bold text-white">Balance: ${balance}</p>
 
         <input
           type="number"
@@ -50,13 +50,13 @@ export default function Startgame({ setStart }) {
 
         <button
           onClick={rollDice}
-          className="mt-3 bg-amber-50 text-3xl rounded p-4 cursor-pointer shadow-xl shadow-slate-900"
+          className="mt-3 bg-[#006A67] text-white text-3xl font-mono rounded-xl p-4 cursor-pointer shadow-xl shadow-slate-900"
         >
           Roll Dice
         </button>
 
         { roll ==null ? (<button
-              className="bg-amber-50 mt-4 text-2xl rounded p-3 cursor-pointer shadow-xl shadow-slate-900"
+              className="bg-amber-50 mt-4 text-2xl font-mono rounded-xl  p-3 cursor-pointer shadow-xl shadow-slate-900"
               onClick={endGame}
             >
               End Game
