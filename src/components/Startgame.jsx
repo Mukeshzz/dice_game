@@ -7,6 +7,7 @@ export default function Startgame({ setStart }) {
   const [roll, setRoll] = useState(null);
   const [hash, setHash] = useState("");
 
+  // Function to roll the dice
   const rollDice = async () => {
     if (bet > balance || bet <= 0) {
       alert("Invalid bet amount!");
@@ -26,6 +27,8 @@ export default function Startgame({ setStart }) {
     }
   };
 
+
+  // Function to end the game
   const endGame = async () => {
     setStart(false);
     const res = await axios.post("https://dice-game-pi48.onrender.com/end-game");

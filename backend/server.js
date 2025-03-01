@@ -4,6 +4,7 @@ import { createHash, randomBytes } from "crypto";
 
 const app = express();
 
+// Middleware
 app.use(
   cors({
     origin: "*",
@@ -14,11 +15,12 @@ app.use(express.json());
 
 let balance = 1000;
 
+// Routes
 app.post("/roll-dice", (req, res) => {
   const { bet } = req.body;
 
   if (bet > balance || bet <= 0) {
-    return res.status(400).json({ message: "Invalid bet amount!" });
+    return res.status(400).json({ message: "Invalid bet amount!" });//Invalid bet amount
   }
   console.log("Bet:", bet)
 
@@ -42,13 +44,14 @@ app.post("/roll-dice", (req, res) => {
   return res.json({ dice: roll, newBalance: balance, hash });
 });
 
+// End Game Route
 app.post("/end-game",(req,res) =>{
   balance = 1000;
   return res.json({message:"Game ended!"})
 });
 
 
-
+// Start the server
 app.listen(3000, () => {
   console.log(`Server is running on port : 3000`);
 });
