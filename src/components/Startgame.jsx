@@ -17,7 +17,7 @@ export default function Startgame({setStart}) {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/roll-dice", { bet });
+      const res = await axios.post("https://dice-game-pi48.onrender.com/roll-dice", { bet });
       const { dice, newBalance, hash } = res.data;
 
       setRoll(dice);
