@@ -33,7 +33,7 @@ export default function Startgame({setStart}) {
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#003161] gap-2 ">
         <h1 className="text-5xl font-bold text-[#FFF4B7]">🎲 Dice Game 🎲</h1>
 
-        <p className="mt-4 text-lg text-white">Balance: ${balance}</p>
+        <p className="mt-4  text-lg text-white">Balance: ${balance}</p>
 
         <input
           type="number"
