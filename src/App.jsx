@@ -16,6 +16,7 @@ const App = () => {
         <Startgame setStart={setStart}/>
       ) : (
         <div className="min-h-screen bg-[#003161] flex flex-col items-center justify-center gap-6">
+          <h1 className="text-5xl font-bold text-[#FFF4B7] font-poppins">🎲 Dice Game 🎲</h1>
           <img src="dice.png" alt=""  className="drop-shadow-[0_5px_10px_rgba(0,0,0,0.7)] rounded-lg "/>
           <button
             className="bg-amber-50 text-3xl rounded p-4 cursor-pointer shadow-xl shadow-slate-900 "
