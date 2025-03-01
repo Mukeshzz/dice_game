@@ -5,7 +5,10 @@ import { createHash, randomBytes } from "crypto";
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  withCredentials: true,
+}));
 app.use(express.json());
 
 let balance = 1000;
